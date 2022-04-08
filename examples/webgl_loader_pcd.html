@@ -50,8 +50,8 @@
 
 
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
-				camera.position.set( 1, 0.5, 0 );
-				camera.position.normalize().multiplyScalar(120)
+				camera.position.set( 1, 0, 1 );
+				camera.position.normalize().multiplyScalar(80)
 				scene.add( camera );
 
 				const controls = new OrbitControls( camera, renderer.domElement );
@@ -70,7 +70,7 @@
 					points.geometry.center();
 					points.geometry.rotateX( Math.PI*1.5 );
 
-					points.material.size = 0.4;
+					points.material.size = 0.15;
 					points.material.color.setHex( Math.random() * 0xffffff );
 
 					scene.add( points );
